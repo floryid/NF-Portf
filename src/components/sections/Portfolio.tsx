@@ -101,7 +101,7 @@ const Portfolio: React.FC = () => {
     {
       title: "AI Model Security Audit",
       description: "Comprehensive security assessment of machine learning models vulnerable to adversarial attacks, identifying and mitigating potential exploits.",
-      image: "https://images.pexels.com/photos/2582937/pexels-photo-2582937.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      image: "/images/audit.jpg",
       technologies: ["TensorFlow", "PyTorch", "Python", "Adversarial ML"],
       category: "AI Security",
       link: "#",
@@ -110,7 +110,7 @@ const Portfolio: React.FC = () => {
     {
       title: "Banking App Penetration Test",
       description: "Discovered critical vulnerabilities in a major banking application's authentication system, preventing potential data breaches.",
-      image: "https://images.pexels.com/photos/6347720/pexels-photo-6347720.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      image: "/images/websec.jpg",
       technologies: ["OWASP", "Burp Suite", "JWT Analysis", "API Security"],
       category: "Web Security",
       link: "#",
@@ -119,7 +119,7 @@ const Portfolio: React.FC = () => {
     {
       title: "IoT Device Firmware Analysis",
       description: "Reverse engineered smart home device firmware to identify and patch remote code execution vulnerabilities affecting millions of devices.",
-      image: "https://images.pexels.com/photos/207589/pexels-photo-207589.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      image: "/images/IOT.jpg",
       technologies: ["IDA Pro", "Ghidra", "C/C++", "ARM Assembly"],
       category: "IoT Security",
       link: "#",
@@ -128,7 +128,7 @@ const Portfolio: React.FC = () => {
     {
       title: "Cloud Infrastructure Security Review",
       description: "Conducted comprehensive security assessment of AWS infrastructure, identifying and remediating misconfigurations and access control issues.",
-      image: "https://images.pexels.com/photos/1148820/pexels-photo-1148820.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      image: "/images/clud.jpg",
       technologies: ["AWS", "CloudFormation", "IAM", "S3", "Lambda"],
       category: "Cloud Security",
       link: "#",
@@ -137,7 +137,7 @@ const Portfolio: React.FC = () => {
     {
       title: "Bug Bounty Critical Vulnerability",
       description: "Discovered and responsibly disclosed a critical authentication bypass vulnerability in a major tech company's platform.",
-      image: "https://images.pexels.com/photos/60504/security-protection-anti-virus-software-60504.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      image: "/images/BugBounty.jpg",
       technologies: ["Web Hacking", "Authentication", "API Security"],
       category: "Bug Bounty",
       link: "#",
