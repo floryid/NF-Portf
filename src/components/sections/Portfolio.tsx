@@ -146,7 +146,7 @@ const Portfolio: React.FC = () => {
     {
       title: "Secure Coding Workshop",
       description: "Developed and delivered secure coding workshops for development teams, focusing on OWASP Top 10 and defensive programming techniques.",
-      image: "https://images.pexels.com/photos/7654125/pexels-photo-7654125.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      image: "/images/SecurityTraining.jpg",
       technologies: ["OWASP", "SAST/DAST", "DevSecOps", "Training"],
       category: "Security Training",
       link: "#",
