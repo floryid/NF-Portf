@@ -15,7 +15,7 @@ const Hero: React.FC = () => {
             transition={{ duration: 0.8 }}
           >
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
-              <span className="text-gradient">Nofrinto Flory</span>
+              <span className="text-gradient">N-Flory</span>
             </h1>
             <h2 className="text-2xl md:text-3xl text-text-light mb-6">
               Cybersecurity Expert & Bug Hunter

@@ -30,7 +30,7 @@ const Footer: React.FC = () => {
               whileTap={{ scale: 0.95 }}
             >
               <CircuitBoard className="text-primary-blue" />
-              <span>Nofrinto Flory</span>
+              <span>NF</span>
             </motion.a>
             <p className="text-text-gray mb-4 max-w-md">
               Cybersecurity expert and bug hunter with expertise in AI security. Helping
@@ -71,14 +71,14 @@ const Footer: React.FC = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4 text-text-light">Contact</h3>
             <ul className="space-y-2 text-text-gray">
-              <li>Email: contact@nofrintoflory.com</li>
+              <li>Email: contact@nf.com</li>
               <li>Location: Jakarta, Indonesia</li>
             </ul>
           </div>
         </div>
         
         <div className="border-t border-primary-blue/10 mt-8 pt-8 text-center text-text-gray">
-          <p>&copy; {currentYear} Nofrinto Flory. All rights reserved.</p>
+          <p>&copy; {currentYear} NF. All rights reserved.</p>
           <p className="text-sm mt-2">
             Designed with <span className="text-secondary-green">❤</span> and secure code.
           </p>

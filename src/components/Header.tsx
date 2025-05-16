@@ -45,7 +45,7 @@ const Header: React.FC = () => {
           whileTap={{ scale: 0.95 }}
         >
           <CircuitBoard className="text-primary-blue" />
-          <span>Nofrinto Flory</span>
+          <span>NF</span>
         </motion.a>
 
         {/* Desktop Navigation */}
