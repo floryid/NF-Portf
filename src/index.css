@@ -1,0 +1,96 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-background-dark font-exo text-text-light overflow-x-hidden;
+  }
+}
+
+@layer components {
+  .container-custom {
+    @apply container mx-auto px-4 md:px-8;
+  }
+  
+  .btn {
+    @apply px-6 py-3 font-semibold rounded-md transition-all duration-300 inline-flex items-center gap-2;
+  }
+  
+  .btn-primary {
+    @apply bg-primary-blue text-text-light hover:bg-primary-blueDark hover:shadow-neon-blue;
+  }
+  
+  .btn-secondary {
+    @apply bg-accent-purple text-text-light hover:bg-accent-purpleDark hover:shadow-neon-purple;
+  }
+  
+  .btn-outline {
+    @apply border-2 border-primary-blue text-primary-blue hover:bg-primary-blue hover:text-text-light hover:shadow-neon-blue;
+  }
+  
+  .section-title {
+    @apply text-4xl md:text-5xl font-bold mb-4 text-text-light relative inline-block;
+  }
+  
+  .section-title::after {
+    content: '';
+    @apply absolute -bottom-2 left-0 w-1/2 h-1 bg-primary-blue rounded-full;
+  }
+  
+  .card {
+    @apply bg-background-darker rounded-lg p-6 border border-primary-blue/20 hover:border-primary-blue/50 transition-all duration-300;
+  }
+  
+  .glowing-border {
+    @apply relative;
+  }
+  
+  .glowing-border::before {
+    content: '';
+    @apply absolute -inset-0.5 bg-gradient-to-r from-primary-blue via-secondary-green to-accent-purple opacity-0 rounded-lg blur transition duration-300;
+  }
+  
+  .glowing-border:hover::before {
+    @apply opacity-70;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-background-darker;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-primary-blue rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-primary-blueDark;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Animated background */
+.cyber-bg {
+  background-size: 50px 50px;
+  background-image:
+    linear-gradient(to right, rgba(68, 114, 196, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(68, 114, 196, 0.05) 1px, transparent 1px);
+}
+
+/* Gradient text */
+.text-gradient {
+  background: linear-gradient(to right, #4472C4, #A777E3);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
