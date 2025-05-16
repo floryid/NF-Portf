@@ -137,7 +137,7 @@ const Portfolio: React.FC = () => {
     {
       title: "Bug Bounty Critical Vulnerability",
       description: "Discovered and responsibly disclosed a critical authentication bypass vulnerability in a major tech company's platform.",
-      image: "/images/BugBounty.jpg",
+      image: "/images/bugbounty.jpg",
       technologies: ["Web Hacking", "Authentication", "API Security"],
       category: "Bug Bounty",
       link: "#",
