@@ -3,7 +3,6 @@ import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { 
   Award, 
-  Code, 
   Cpu, 
   Shield, 
   Bug, 
@@ -35,7 +34,6 @@ const About: React.FC = () => {
   return (
     <section id="about" className="py-20 relative" ref={ref}>
       <div className="absolute right-0 top-0 w-1/3 h-full bg-circuit bg-cover opacity-5" />
-      
       <div className="container-custom">
         <motion.div
           className="mb-12"
@@ -48,11 +46,10 @@ const About: React.FC = () => {
             Experienced cybersecurity specialist and professional bug hunter with a passion for AI security
           </p>
         </motion.div>
-      
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: -30 }}
+            initial={{ opacity: 0, y: 30 }}
+            animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
             <h3 className="text-2xl font-semibold mb-6 text-primary-blue">Background</h3>
@@ -71,7 +68,6 @@ const About: React.FC = () => {
                 through responsible disclosure programs and security research publications.
               </p>
             </div>
-
             <div className="mt-8 grid grid-cols-2 md:grid-cols-4 gap-4">
               {statsData.map((stat, index) => (
                 <motion.div
@@ -91,69 +87,44 @@ const About: React.FC = () => {
               ))}
             </div>
           </motion.div>
-
           <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: 30 }}
+            initial={{ opacity: 0, y: 30 }}
+            animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
             transition={{ duration: 0.6, delay: 0.3 }}
           >
             <h3 className="text-2xl font-semibold mb-6 text-primary-blue">Skills & Expertise</h3>
-            
             <div className="space-y-6">
               {skills.map((skill, index) => (
                 <motion.div 
                   key={index}
-                  initial={{ opacity: 0 }}
-                  animate={inView ? { opacity: 1 } : { opacity: 0 }}
-                  transition={{ duration: 0.5, delay: 0.5 + (index * 0.1) }}
+                  initial={{ opacity: 0, x: -40, scale: 0.95 }}
+                  whileInView={{ opacity: 1, x: 0, scale: 1 }}
+                  viewport={{ once: true, amount: 0.3 }}
+                  transition={{ duration: 0.7, delay: 0.2 + (index * 0.12), ease: 'easeOut' }}
                   className="mb-4"
                 >
                   <div className="flex justify-between mb-1">
-                    <span className="text-text-light">{skill.name}</span>
-                    <span className="text-text-gray">{skill.level}%</span>
+                    <span className="text-text-light text-base md:text-lg font-medium drop-shadow-sm">{skill.name}</span>
+                    <span className="text-text-gray text-sm md:text-base font-semibold">{skill.level}%</span>
                   </div>
-                  <div className="h-2 bg-background-darker rounded-full overflow-hidden">
+                  <div className="relative h-3 md:h-4 bg-background-darker rounded-full overflow-hidden shadow-inner">
                     <motion.div
-                      className={`h-full bg-${skill.color} rounded-full`}
-                      initial={{ width: 0 }}
-                      animate={inView ? { width: `${skill.level}%` } : { width: 0 }}
-                      transition={{ duration: 1, delay: 0.7 + (index * 0.1) }}
+                      className={`absolute left-0 top-0 h-full rounded-full shadow-lg animate-glow-bar bg-gradient-to-r from-${skill.color} via-white/60 to-${skill.color}`}
+                      initial={{ width: 0, filter: 'brightness(1) blur(0px)' }}
+                      animate={inView ? { width: `${skill.level}%`, filter: 'brightness(1.2) blur(2px)' } : { width: 0, filter: 'brightness(1) blur(0px)' }}
+                      transition={{ duration: 1.3, delay: 0.4 + (index * 0.13), type: 'spring', bounce: 0.25 }}
+                      style={{ boxShadow: '0 0 16px 4px rgba(68,114,196,0.25)' }}
+                    />
+                    <motion.div
+                      className="absolute right-0 top-0 h-full w-3 bg-gradient-to-l from-background-darker via-transparent to-transparent pointer-events-none"
+                      initial={{ opacity: 0 }}
+                      animate={inView ? { opacity: 1 } : { opacity: 0 }}
+                      transition={{ duration: 1.1, delay: 0.7 + (index * 0.13) }}
                     />
                   </div>
                 </motion.div>
               ))}
             </div>
-
-            <motion.div
-              className="mt-8"
-              initial={{ opacity: 0, y: 20 }}
-              animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-              transition={{ duration: 0.5, delay: 1 }}
-            >
-              <h3 className="text-xl font-semibold mb-4 text-primary-blue">Technologies</h3>
-              <div className="flex flex-wrap gap-3">
-                {[
-                  'Python', 'JavaScript', 'Burp Suite', 'Metasploit', 
-                  'OWASP ZAP', 'Wireshark', 'TensorFlow', 'PyTorch',
-                  'Docker', 'AWS', 'Kali Linux', 'IDA Pro'
-                ].map((tech, index) => (
-                  <motion.span
-                    key={index}
-                    className="px-3 py-1.5 rounded-full bg-background-darker border border-primary-blue/30 text-sm text-text-gray"
-                    whileHover={{ 
-                      scale: 1.05, 
-                      borderColor: 'rgba(68, 114, 196, 0.8)',
-                      boxShadow: '0 0 5px rgba(68, 114, 196, 0.5)' 
-                    }}
-                    initial={{ opacity: 0, scale: 0.9 }}
-                    animate={inView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.9 }}
-                    transition={{ duration: 0.3, delay: 1 + (index * 0.05) }}
-                  >
-                    {tech}
-                  </motion.span>
-                ))}
-              </div>
-            </motion.div>
           </motion.div>
         </div>
       </div>

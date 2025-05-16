@@ -72,7 +72,7 @@ const Footer: React.FC = () => {
             <h3 className="text-lg font-semibold mb-4 text-text-light">Contact</h3>
             <ul className="space-y-2 text-text-gray">
               <li>Email: contact@nf.com</li>
-              <li>Location: Jakarta, Indonesia</li>
+              <li>Location: Sorong papua, Indonesia</li>
             </ul>
           </div>
         </div>
